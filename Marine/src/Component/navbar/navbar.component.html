@@ -1,0 +1,36 @@
+<header class="header">
+  <!-- Logo Section -->
+  <div class="logo" (click)="navigateToHome()">
+    <img src="mar.png" alt="Marine Logo" />
+    <h1>Marine</h1>
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="nav">
+    <ul>
+      <!-- Disable Dashboard Link if Not Logged In -->
+      <li [class.disabled]="!isLoggedIn">
+        <a *ngIf="isLoggedIn; else disabledDashboard" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        <ng-template #disabledDashboard>
+          <span class="disabled-link">Dashboard</span>
+        </ng-template>
+      </li>
+
+      <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+      <li><a routerLink="/contactus" routerLinkActive="active">Contact Us</a></li>
+
+      <!-- Profile Dropdown -->
+      <li class="profile dropdown">
+        <a (click)="handleProfileClick()">
+          <i class="fas fa-user-circle"></i>
+          <span>{{ isLoggedIn ? userName : 'Guest' }}</span>
+        </a>
+
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu" *ngIf="showDropdown">
+          <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>

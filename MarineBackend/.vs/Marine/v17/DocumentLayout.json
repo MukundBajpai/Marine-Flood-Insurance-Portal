@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\New folder (2)\\New folder\\MarineBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\model\\entity\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\model\\entity\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\model\\adduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\model\\adduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\model\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\model\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\marine.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\marine.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|d:\\new folder (2)\\new folder\\marinebackend\\marine\\migrations\\20250414074124_add-migration initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD64C15-6FBB-4DC6-98EE-6E6692E5C857}|Marine\\Marine.csproj|solutionrelative:marine\\migrations\\20250414074124_add-migration initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Marine\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Marine\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:31:21.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Model\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "Marine\\Model\\LoginUserDto.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Model\\LoginUserDto.cs",
+              "RelativeToolTip": "Marine\\Model\\LoginUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T10:06:23.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Model\\Entity\\UserManager.cs",
+              "RelativeDocumentMoniker": "Marine\\Model\\Entity\\UserManager.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Model\\Entity\\UserManager.cs",
+              "RelativeToolTip": "Marine\\Model\\Entity\\UserManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:24:36.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\appsettings.json",
+              "RelativeDocumentMoniker": "Marine\\appsettings.json",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\appsettings.json",
+              "RelativeToolTip": "Marine\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-14T07:33:13.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagerController.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Controllers\\UserManagerController.cs",
+              "RelativeDocumentMoniker": "Marine\\Controllers\\UserManagerController.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Controllers\\UserManagerController.cs",
+              "RelativeToolTip": "Marine\\Controllers\\UserManagerController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAIwDsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:43:59.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddUserDto.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Model\\AddUserDto.cs",
+              "RelativeDocumentMoniker": "Marine\\Model\\AddUserDto.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Model\\AddUserDto.cs",
+              "RelativeToolTip": "Marine\\Model\\AddUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:49:53.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Program.cs",
+              "RelativeDocumentMoniker": "Marine\\Program.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Program.cs",
+              "RelativeToolTip": "Marine\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:33:12.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250414074124_add-migration initial.cs",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Migrations\\20250414074124_add-migration initial.cs",
+              "RelativeDocumentMoniker": "Marine\\Migrations\\20250414074124_add-migration initial.cs",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Migrations\\20250414074124_add-migration initial.cs",
+              "RelativeToolTip": "Marine\\Migrations\\20250414074124_add-migration initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:41:25.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Marine.csproj",
+              "DocumentMoniker": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Marine.csproj",
+              "RelativeDocumentMoniker": "Marine\\Marine.csproj",
+              "ToolTip": "D:\\New folder (2)\\New folder\\MarineBackend\\Marine\\Marine.csproj",
+              "RelativeToolTip": "Marine\\Marine.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-14T07:30:35.405Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+<div class="view-quote-container">
+    <h2>Quote Summary</h2>
+  
+    <section class="section">
+      <h3>Broker Details</h3>
+      <p><strong>Name:</strong> {{ data?.brokerDetails?.name }}</p>
+      <p><strong>Email:</strong> {{ data?.brokerDetails?.email }}</p>
+      <p><strong>Phone:</strong> {{ data?.brokerDetails?.phone }}</p>
+      <p><strong>Broker ID:</strong> {{ data?.brokerDetails?.BrokerID }}</p>
+    </section>
+  
+    <section class="section">
+      <h3>Homeowner Details</h3>
+      <p><strong>Name:</strong> {{ data?.homeownerDetails?.name }}</p>
+      <p><strong>Contact:</strong> {{ data?.homeownerDetails?.contact }}</p>
+      <p><strong>PAN/Adhaar:</strong> {{ data?.homeownerDetails?.pan }}</p>
+    </section>
+  
+    <section class="section">
+      <h3>Property Details</h3>
+      <p><strong>Address:</strong> {{ data?.propertyDetails?.address }}</p>
+      <p><strong>Flood Zone:</strong> {{ data?.propertyDetails?.floodZone }}</p>
+      <p><strong>Size:</strong> {{ data?.propertyDetails?.size }} sq.ft.</p>
+    </section>
+  
+    <section class="section">
+      <h3>Construction & Usage</h3>
+      <p><strong>Foundation:</strong> {{ data?.foundationType?.type }}</p>
+      <p><strong>Construction:</strong> {{ data?.constructionDetails?.type }}</p>
+      <p><strong>Usage:</strong> {{ data?.homeUsage?.usageType }}</p>
+      <p><strong>Stories:</strong> {{ data?.storiesDetails?.count }}</p>
+    </section>
+  
+    <section class="section">
+      <h3>Additional Info</h3>
+      <p><strong>Year Built:</strong> {{ data?.propertyInfo?.yearBuilt }}</p>
+      <p><strong>Elevation:</strong> {{ data?.propertyInfo?.elevation }} m</p>
+    </section>
+  
+    <section class="section">
+      <h3>Coverage Details</h3>
+      <p><strong>Building Coverage:</strong> ₹{{ data?.coverageDetails?.buildingCoverage }}</p>
+      <p><strong>Personal Property:</strong> ₹{{ data?.coverageDetails?.personalProperty }}</p>
+      <p><strong>Deductible:</strong> ₹{{ data?.coverageDetails?.deductible }}</p>
+      <p><strong>Selected Plan:</strong> {{ data?.coverageDetails?.selectedPlan }}</p>
+    </section>
+  
+    <section class="section premium-section">
+      <h3>Calculated Premium: ₹{{ premium }}</h3>
+    
+      <button class="btn btn-secondary breakdown-toggle" (click)="toggleBreakdown()">
+        {{ showBreakdown ? 'Hide Breakdown' : 'Show Breakdown' }}
+      </button>
+    
+      <div *ngIf="showBreakdown" class="breakdown-details">
+        <h4>Factors Contributing to Premium:</h4>
+        <table class="premium-factors-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>% Contribution</th>
+              <th>Summary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let factor of premiumDetails()?.factors">
+              <td>{{ factor.name }}</td>
+              <td>{{ factor.percentage }}%</td>
+              <td>{{ factor.details }}</td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <div class="factor-explanations">
+          <h5>Detailed Explanations:</h5>
+          <ul>
+            <li><strong>Flood Zone:</strong> Properties in high-risk flood zones (Zone A, AE, VE) are more likely to flood, so they receive a 30% premium increase.</li>
+            <li><strong>Elevation:</strong> Lower elevation homes are at more risk during floods, hence a 20% contribution. Elevation certificates help reduce this risk.</li>
+            <li><strong>Building Coverage:</strong> The higher the coverage amount, the higher the premium. ₹500,000 coverage adds about 25% to the premium.</li>
+            <li><strong>Deductible:</strong> Choosing a higher deductible reduces the premium. A lower deductible means the insurer bears more risk (15%).</li>
+            <li><strong>Selected Plan:</strong> Plans with more comprehensive coverage or add-ons increase the premium, contributing about 10%.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    
+  
+    <div class="button-group">
+      <button class="btn btn-secondary" (click)="editQuote()">Edit</button>
+      <button class="btn btn-primary" (click)="submitFinalQuote()">Submit Quote</button>
+    </div>
+  </div>
+  

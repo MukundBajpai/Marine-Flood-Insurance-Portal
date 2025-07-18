@@ -1,0 +1,52 @@
+<div class="quote-list-wrapper">
+  <h2><i class="fas fa-file-invoice-dollar"></i> Submitted Quotes</h2>
+
+  <!-- Search Bar -->
+  <input
+    type="text"
+    placeholder="Search Quotes..."
+    [(ngModel)]="searchText"
+    (input)="filterQuotes()"
+    class="search-input"
+  />
+
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sortQuotes('quoteId')">
+          Quote ID
+          <i class="fas" [ngClass]="sortColumn === 'quoteId' && sortDirection === 'asc' ? 'fa-sort-up' : 'fa-sort-down'"></i>
+        </th>
+        <th (click)="sortQuotes('applicantName')">
+          Applicant Name
+          <i class="fas" [ngClass]="sortColumn === 'applicantName' && sortDirection === 'asc' ? 'fa-sort-up' : 'fa-sort-down'"></i>
+        </th>
+        <th (click)="sortQuotes('quoteAmount')">
+          Quote Amount
+          <i class="fas" [ngClass]="sortColumn === 'quoteAmount' && sortDirection === 'asc' ? 'fa-sort-up' : 'fa-sort-down'"></i>
+        </th>
+        <th (click)="sortQuotes('dateCreated')">
+          Date of Creation
+          <i class="fas" [ngClass]="sortColumn === 'dateCreated' && sortDirection === 'asc' ? 'fa-sort-up' : 'fa-sort-down'"></i>
+        </th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quote of filteredQuotes; let i = index" [class.deleted]="quote.deleted">
+        <td>{{ quote.quoteId }}</td>
+        <td>{{ quote.applicantName }}</td>
+        <td>${{ quote.quoteAmount | number:'1.2-2' }}</td>
+        <td>{{ quote.dateCreated | date:'mediumDate' }}</td>
+        <td>
+          <button class="view-btn" (click)="viewQuote(quote.quoteId)"><i class="fas fa-eye"></i> View</button>
+          <button class="edit-btn" (click)="editQuote(quote.quoteId)"><i class="fas fa-edit"></i> Edit</button>
+          <button class="delete-btn" (click)="softDeleteQuote(quote.quoteId)" [disabled]="quote.deleted">
+            <i class="fas" [ngClass]="quote.deleted ? 'fa-ban' : 'fa-trash'"></i>
+            {{ quote.deleted ? "Deleted" : "Delete" }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

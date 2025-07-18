@@ -1,0 +1,194 @@
+/* Navbar styles */
+.header {
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 16px;
+  /* Increased spacing */
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* Increased spacing */
+}
+
+/* Nav link styles */
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover and active state */
+.nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Active route highlight */
+.nav ul li a.active {
+  background-color: #0d47a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
+}
+
+/* Profile section */
+.profile {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* Increased spacing between icon and username */
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Profile icon */
+.profile i {
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+/* Profile username */
+.profile span {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.profile:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Profile Dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #1e1e1e;
+  /* Dark background */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  list-style: none;
+  padding: 12px 0;
+  width: 180px;
+  /* Slightly wider */
+  text-align: left;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show dropdown when active */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  padding: 14px 22px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  /* Light text for contrast */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hover effect */
+.dropdown-menu li:hover {
+  background: #2196F3;
+  /* Bright Blue */
+  color: #fff;
+}
+
+/* Logout button */
+.dropdown-menu .logout {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* Logout hover effect */
+.dropdown-menu .logout:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+/* Disabled Link Style */
+.disabled-link {
+  color: #888;
+  font-size: 1.2rem;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* .disabled {
+  /* pointer-events: none; */
+/* Disable click */
+/* opacity: 0.5; */

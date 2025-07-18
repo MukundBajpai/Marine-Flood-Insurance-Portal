@@ -1,0 +1,389 @@
+<div class="quote-form-container">
+  <div class="progress-bar-container">
+    <div
+      class="progress-bar"
+      [style.width.%]="progress"
+      [attr.data-percent]="progress"
+    ></div>
+  </div>
+
+  <form [formGroup]="quoteForm">
+    <!-- Step 1 -->
+    <div *ngIf="currentStep === 1" formGroupName="brokerDetails">
+      <h2 class="step-title">Broker Details</h2>
+      <div class="form-group">
+        <label>Name</label>
+        <input formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" />
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input formControlName="phone" />
+      </div>
+      <div class="form-group">
+        <label>Broker ID</label>
+        <input formControlName="BrokerID" />
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div *ngIf="currentStep === 2" formGroupName="homeownerDetails">
+      <h2 class="step-title">Property Owner Details</h2>
+      <div class="form-group">
+        <label>Name</label>
+        <input formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label>Contact No.</label>
+        <input formControlName="contact" />
+      </div>
+      <div class="form-group">
+        <label>PAN No./Adhaar No.</label>
+        <input formControlName="pan" />
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div *ngIf="currentStep === 3" formGroupName="propertyDetails">
+      <h2 class="step-title">Property Details</h2>
+      <div class="form-group">
+        <label>Address</label>
+        <input formControlName="address" />
+      </div>
+      <div class="form-group">
+        <label for="floodZone">Flood Zone</label>
+        <select id="floodZone" formControlName="floodZone">
+          <option value="low-risk">Low Risk</option>
+          <option value="moderate-risk">Moderate Risk</option>
+          <option value="high-risk">High Risk</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Size (sq.ft.)</label>
+        <input formControlName="size" />
+      </div>
+      <div class="form-group">
+        <label for="proofOfOwnership">Proof of Ownership</label>
+        <input
+          id="proofOfOwnership"
+          type="file"
+          formControlName="proofOfOwnership"
+        />
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div *ngIf="currentStep === 4" formGroupName="foundationType">
+      <h2 class="step-title">Select Foundation Type</h2>
+      <div class="image-options">
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Slab', 'foundationType.type')"
+        >
+          <img src="Slab.png" alt="Slab" />
+          <p>Slab</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Crawl Space', 'foundationType.type')"
+        >
+          <img src="Crawl.png" alt="Crawl Space" />
+          <p>Crawl Space</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Basement', 'foundationType.type')"
+        >
+          <img src="basement.png" alt="Basement" />
+          <p>Basement</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Piles/Posts', 'foundationType.type')"
+        >
+          <img src="pile.jpg" alt="Piles/Posts" />
+          <p>Piles/Posts</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 8 -->
+    <div *ngIf="currentStep === 8" formGroupName="propertyInfo">
+      <h2 class="step-title">Additonal Property Information</h2>
+      <div class="form-group">
+        <label>Year Built</label>
+        <input formControlName="yearBuilt" />
+      </div>
+      <div class="form-group">
+        <label for="elevation">Elevation (in meters)</label>
+        <input id="elevation" type="number" formControlName="elevation" />
+      </div>
+
+      <!-- ///////////////////////////////////////// -->
+    </div>
+
+    <!-- Step 5 -->
+    <div *ngIf="currentStep === 5" formGroupName="homeUsage">
+      <h2 class="step-title">Property Usage</h2>
+      <div class="image-options">
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Primary House', 'homeUsage.usageType')"
+        >
+          <img src="/assets/usage-primary-house.jpg" alt="Primary Property" />
+          <p>Primary Property</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Rental - Tenant', 'homeUsage.usageType')"
+        >
+          <img src="/assets/usage-rental-tenant.jpg" alt="Rental - Tenant" />
+          <p>Rental - Tenant</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Rental - Owner', 'homeUsage.usageType')"
+        >
+          <img src="/assets/usage-rental-owner.jpg" alt="Rental - Owner" />
+          <p>Rental - Owner</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Secondary', 'homeUsage.usageType')"
+        >
+          <img src="/assets/usage-secondary.jpg" alt="Secondary" />
+          <p>Secondary</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 9 -->
+    <div *ngIf="currentStep === 9" formGroupName="coverageDetails">
+      <h2 class="step-title">Coverage Details</h2>
+
+      <div class="form-group">
+        <label>Building Coverage Amount</label>
+        <input formControlName="buildingCoverage" />
+      </div>
+
+      <div class="form-group">
+        <label>Personal Property Value</label>
+        <input formControlName="personalProperty" />
+      </div>
+
+      <div class="form-group">
+        <label>Deductible</label>
+        <input formControlName="deductible" />
+      </div>
+
+      <!-- Add hidden input to store selectedPlan -->
+      <input type="hidden" formControlName="selectedPlan" />
+
+      <div class="coverage-plans">
+        <div
+          class="plan-card silver"
+          [ngClass]="{
+            selected:
+              quoteForm.get('coverageDetails.selectedPlan')?.value === 'Silver'
+          }"
+          (click)="selectPlan('Silver')"
+        >
+          <h3>Silver Plan</h3>
+          <ul>
+            <li>Basic Coverage</li>
+            <li>Low Premium</li>
+            <li>Standard Support</li>
+          </ul>
+        </div>
+
+        <div
+          class="plan-card gold"
+          [ngClass]="{
+            selected:
+              quoteForm.get('coverageDetails.selectedPlan')?.value === 'Gold'
+          }"
+          (click)="selectPlan('Gold')"
+        >
+          <h3>Gold Plan</h3>
+          <ul>
+            <li>Extended Coverage</li>
+            <li>Medium Premium</li>
+            <li>Priority Support</li>
+          </ul>
+        </div>
+
+        <div
+          class="plan-card platinum"
+          [ngClass]="{
+            selected:
+              quoteForm.get('coverageDetails.selectedPlan')?.value ===
+              'Platinum'
+          }"
+          (click)="selectPlan('Platinum')"
+        >
+          <h3>Platinum Plan</h3>
+          <ul>
+            <li>Maximum Coverage</li>
+            <li>Premium Support</li>
+            <li>Flood Mitigation Services</li>
+          </ul>
+        </div>
+      </div>
+      <!-- <button type="button" (click)="calculatePremium()" class="btn btn-primary">Calculate Premium</button> -->
+    </div>
+
+    <!-- Step 7 -->
+    <div *ngIf="currentStep === 7" formGroupName="constructionDetails">
+      <h2 class="step-title">Construction Type</h2>
+      <div class="image-options">
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Wood Frame', 'constructionDetails.type')"
+        >
+          <img src="/assets/construction-wood.jpg" alt="Wood Frame" />
+          <p>Wood Frame</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="
+            selectImageAndNext('Steel Frame', 'constructionDetails.type')
+          "
+        >
+          <img src="/assets/construction-steel.jpg" alt="Steel Frame" />
+          <p>Steel Frame</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Concrete', 'constructionDetails.type')"
+        >
+          <img src="/assets/construction-concrete.jpg" alt="Concrete" />
+          <p>Concrete</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Bricks', 'constructionDetails.type')"
+        >
+          <img src="/assets/construction-brick.jpg" alt="Bricks" />
+          <p>Bricks</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div *ngIf="currentStep === 6" formGroupName="storiesDetails">
+      <h2 class="step-title">Number of Stories</h2>
+      <div class="image-options">
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('One', 'storiesDetails.count')"
+        >
+          <img src="/assets/stories-one.jpg" alt="One Story" />
+          <p>One</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Two', 'storiesDetails.count')"
+        >
+          <img src="/assets/stories-two.jpg" alt="Two Stories" />
+          <p>Two</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('Three', 'storiesDetails.count')"
+        >
+          <img src="/assets/stories-three.jpg" alt="Three Stories" />
+          <p>Three</p>
+        </div>
+        <div
+          class="image-option"
+          (click)="selectImageAndNext('More than 3', 'storiesDetails.count')"
+        >
+          <img src="/assets/stories-more.jpg" alt="More than 3" />
+          <p>More than 3</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 10 -->
+    <!-- <div *ngIf="currentStep === 10" formGroupName="homeTypeDetails">
+      <h2 class="step-title">What Kind of Home Do You Have?</h2>
+      <div class="image-options">
+        <div class="image-option" (click)="quoteForm.get('homeTypeDetails.type')?.setValue('Single Family')">
+          <img src="/assets/home-single.jpg" alt="Single Family" />
+          <p>Single Family</p>
+        </div>
+        <div class="image-option" (click)="quoteForm.get('homeTypeDetails.type')?.setValue('Condo')">
+          <img src="/assets/home-condo.jpg" alt="Condo" />
+          <p>Condo</p>
+        </div>
+        <div class="image-option" (click)="quoteForm.get('homeTypeDetails.type')?.setValue('2–4 Family')">
+          <img src="/assets/home-2-4.jpg" alt="2–4 Family" />
+          <p>2–4 Family</p>
+        </div>
+        <div class="image-option" (click)="quoteForm.get('homeTypeDetails.type')?.setValue('Other')">
+          <img src="/assets/home-other.jpg" alt="Other" />
+          <p>Other</p>
+        </div>
+      </div>
+    </div> -->
+    <!-- Step 11 -->
+    <!-- <div *ngIf="currentStep === 11" formGroupName="garageDetails">
+      <h2 class="step-title">Garage Type</h2>
+      <div class="image-options">
+        <div class="image-option" (click)="quoteForm.get('garageDetails.type')?.setValue('Attached')">
+          <img src="/assets/garage-attached.jpg" alt="Attached Garage" />
+          <p>Attached</p>
+        </div>
+        <div class="image-option" (click)="quoteForm.get('garageDetails.type')?.setValue('Detached')">
+          <img src="/assets/garage-detached.jpg" alt="Detached Garage" />
+          <p>Detached</p>
+        </div>
+        <div class="image-option" (click)="quoteForm.get('garageDetails.type')?.setValue('No Garage')">
+          <img src="/assets/garage-none.jpg" alt="No Garage" />
+          <p>No Garage</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="form-actions" *ngIf="currentStep === 7">
+      <button type="button" (click)="submitQuote()" class="submit-button">Submit Quote</button>
+    </div> -->
+
+    <!-- Navigation -->
+    <!-- Next button -->
+
+    <div class="button-group">
+      <button
+        class="back-btn"
+        type="button"
+        (click)="back()"
+        [disabled]="currentStep === 1"
+      >
+        Back
+      </button>
+
+      <!-- Show "Next" for steps 1 to 8 -->
+      <button
+        class="next-btn"
+        type="button"
+        *ngIf="currentStep < 9"
+        (click)="next()"
+      >
+        Next
+      </button>
+
+      <!-- Show "Calculate Premium" only on step 9 -->
+      <button
+        type="button"
+        class="calculate-btn"
+        *ngIf="currentStep === 9"
+        (click)="calculatePremium()"
+      >
+        Calculate Premium
+      </button>
+    </div>
+  </form>
+</div>

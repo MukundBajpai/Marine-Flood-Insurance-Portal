@@ -1,0 +1,515 @@
+/* 🌐 Global Layout */
+.contact-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #cce6ff, #eaf4ff, #f8fbff);
+    /* slightly deeper tone */
+    font-family: 'Segoe UI', sans-serif;
+    color: #1a1a1a;
+}
+
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 📬 Contact Form */
+/* 📬 Contact Form Enhancements */
+.contact-form {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 64, 128, 0.2);
+    transition: all 0.4s ease;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 1rem;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-column {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+/* Input & Textarea styling */
+input,
+textarea {
+    width: 80%;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: #e6f0ff;
+    font-size: 1rem;
+    color: #222;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    background: #d8e8ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #88bdfd;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+
+}
+
+/* Button enhancement */
+.contact-form button[type="submit"] {
+    background: linear-gradient(to right, #004aad, #2e88ff);
+    color: white;
+    padding: 0.9rem 2.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin-top: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 64, 128, 0.25);
+}
+
+.contact-form button[type="submit"]:hover {
+    background: linear-gradient(to right, #003d99, #3b94ff);
+    transform: translateY(-2px);
+}
+
+
+/* 🏷️ Headers */
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0a3c89, #45a3ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+
+.subtext {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: #3c4d68;
+}
+
+/* ✏️ Inputs */
+
+.input-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: #e5efff;
+    font-size: 1rem;
+    color: #222;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* 🌟 Submit Button */
+button[type="submit"] {
+    background: linear-gradient(to right, #0a3c89, #2670f2);
+    color: #fff;
+    padding: 0.9rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(10, 60, 137, 0.3);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #083070, #2e88ff);
+}
+
+/* 🎛️ Toggle Button */
+.toggle-form-btn {
+    background: linear-gradient(to right, #0d3c7c, #2670f2);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 1.5rem 0;
+    box-shadow: 0 10px 24px rgba(10, 60, 137, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.toggle-form-btn:hover {
+    background: linear-gradient(to right, #0945a1, #2e88ff);
+    transform: translateY(-2px);
+}
+
+/* 📍 Info Cards */
+.info-card {
+    background: linear-gradient(145deg, #e3f0ff, #ffffff);
+    padding: 2.2rem;
+    margin: 2rem 0;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 64, 128, 0.08);
+    transition: all 0.3s ease;
+}
+
+.info-card.highlight {
+    background: linear-gradient(145deg, #004aad, #2e88ff);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 64, 128, 0.25);
+}
+
+.info-card.highlight p {
+    color: white;
+}
+
+.info-card button {
+    background-color: #ffffff;
+    color: #0a3c89;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s ease;
+}
+
+.info-card button:hover {
+    background-color: #f0f4fc;
+}
+
+/* 🗺 Map Embeds */
+.map-section iframe {
+    width: 100%;
+    height: 320px;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 64, 128, 0.1);
+}
+
+/* ❓ FAQ */
+/* ❓ FAQ Section */
+.faq-section {
+    margin: 4rem 0;
+    padding: 0 1rem;
+}
+
+.faq-section h3 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0a3c89;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+
+/* FAQ Item Container */
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #e3f0ff, #ffffff);
+    box-shadow: 0 6px 20px rgba(0, 64, 128, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* FAQ Question Button */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    background: #d0e6ff;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0a3c89;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.faq-question:hover {
+    background: #c2dbfa;
+    transform: translateY(-1px);
+}
+
+/* Toggle Icon */
+.faq-question span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004aad;
+    transition: transform 0.3s ease;
+}
+
+.faq-question span.expanded {
+    transform: rotate(45deg);
+}
+
+/* FAQ Answer */
+.faq-answer {
+    padding: 1rem 1.5rem;
+    background: #f7faff;
+    border-left: 5px solid #004aad;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.95rem;
+    color: #333;
+    animation: fadeIn 0.4s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 📞 Contact Info Cards */
+/* 📞 Contact Info Cards - Updated Color Scheme */
+.contact-info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info-cards h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    color: #174ea6;
+    /* Soft navy */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.info-card {
+    background: linear-gradient(145deg, #b0d4ff, #daeaff);
+    padding: 2.2rem;
+    margin: 2rem 0;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 64, 128, 0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modern Hover Effect */
+.info-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    background: linear-gradient(145deg, #a0caff, #d4e9ff);
+    box-shadow: 0 12px 32px rgba(0, 64, 128, 0.3);
+    color: black;
+    border: 1px solid #2e88ff;
+
+    p {
+        color: black;
+    }
+}
+
+/* Pulse animation for hover glow */
+.info-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(46, 136, 255, 0.15), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.info-card:hover::before {
+    opacity: 1;
+}
+
+.info-card h4,
+.info-card p,
+.info-card button {
+    position: relative;
+    z-index: 1;
+}
+
+.info-card h4 {
+    font-size: 1.3rem;
+    color: #1d56b4;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #2f415f;
+    transition: color 0.3s ease;
+}
+
+/* Optional card button styling (if you use buttons inside cards) */
+.info-card button {
+    background-color: #2e88ff;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 64, 128, 0.15);
+}
+
+.info-card button:hover {
+    background-color: #0a3c89;
+    transform: translateY(-2px);
+}
+
+
+/* 🌐 Social Icons */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #0a3c89;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #2e88ff;
+    transform: scale(1.05);
+}
+
+.social-link i {
+    font-size: 1.6rem;
+}
+
+.social-link span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .contact-info-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 📜 Terms & Conditions Section */
+/* 📜 Updated Terms & Conditions Section */
+.terms-section {
+    margin-top: 4rem;
+    background: linear-gradient(145deg, #063f7c, #3792ff);
+    /* Darker distinct blue gradient */
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 64, 128, 0.25);
+    animation: fadeInUp 0.7s ease;
+    transition: all 0.4s ease;
+}
+
+.terms-section h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(to right, #ffffff, #e1efff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.terms-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.terms-section ul {
+    list-style: disc inside;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    color: #ffffff;
+}
+
+.terms-section li {
+    margin-bottom: 0.6rem;
+    transition: transform 0.2s ease;
+}
+
+.terms-section li:hover {
+    transform: translateX(5px);
+
+}

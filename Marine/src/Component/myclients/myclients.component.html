@@ -1,0 +1,28 @@
+<div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/quoteform">New Quote</a></li>
+        <li><a routerLink="/quote-list">All Quotes</a></li>
+        <li><a routerLink="/myclients">My Clients</a></li>
+      </ul>
+    </div>
+  
+    <!-- Main content area -->
+    <div class="main-content">
+      <div class="client-list">
+        <div class="client-card" *ngFor="let client of clients">
+          <img src="assets/profile-placeholder.png" alt="Profile" class="profile-pic" />
+          <div class="client-info">
+            <h2>{{ client.name }}</h2>
+            <p><strong>Address:</strong> {{ client.address }}</p>
+            <p><strong>PAN:</strong> {{ client.pan }}</p>
+            <p><strong>Phone:</strong> {{ client.phone }}</p>
+            <p><strong>Email:</strong> {{ client.email }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,148 @@
+/* Global */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    /* position: sticky; */
+    top: 0;
+    height: 100vh;
+    /* Sidebar takes full height */
+    z-index: 10;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    margin: 18px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 12px 18px;
+    display: block;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(6px);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #f9fafb;
+    transition: background-color 0.3s ease;
+}
+
+/* Clients */
+.client-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Card Animation */
+.client-card {
+    background: linear-gradient(to right, #e0f7ff, #cceeff);
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    gap: 1.5rem;
+    border: 2px solid transparent;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeSlideUp 0.6s ease forwards;
+}
+
+@keyframes fadeSlideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.client-card:hover {
+    transform: translateY(-6px) rotateZ(-0.5deg);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+    border: 2px solid #007bff55;
+    background: linear-gradient(to right, #d7f3ff, #bde6ff);
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.client-card:hover .profile-pic {
+    transform: scale(1.08);
+}
+
+.client-info h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #005c99;
+    transition: color 0.3s ease;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.client-info p {
+    margin: 0.25rem 0;
+    color: #003d66;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}

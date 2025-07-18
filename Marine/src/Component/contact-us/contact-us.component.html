@@ -1,0 +1,285 @@
+<div class="contact-section">
+  <div class="contact-wrapper">
+
+    <!-- 🔹 Hero / Header -->
+    <h2>Contact Our Team</h2>
+    <p class="subtext">Have questions, need a quote, or want to connect with our broker team?</p>
+    <div class="center">
+      <button class="toggle-form-btn" (click)="toggleForm()">
+        {{ showForm ? 'Hide Form' : 'Get in Touch' }}
+      </button>
+    </div>
+
+   <!-- 📨 Contact Form -->
+<form class="contact-form glass" *ngIf="showForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="input-row">
+       <div class="input-column">
+              <label for="firstName">First Name</label>
+              <input id="firstName" type="text" placeholder="First Name" formControlName="firstName" />
+            </div>
+            <div class="input-column">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" type="text" placeholder="Last Name" formControlName="lastName" />
+            </div>
+          </div>
+  
+    <div class="input-group">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="Email Address" formControlName="email" />
+    </div>
+  
+    <div class="input-group">
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" placeholder="Subject" formControlName="subject" />
+    </div>
+  
+    <div class="input-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your Message" formControlName="message"></textarea>
+    </div>
+  
+    <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+  </form>
+  
+
+    <!-- 🧾 Broker Registration -->
+    <div class="info-card">
+      <h3>Are you a Broker?</h3>
+      <p>Register today and get access to exclusive client opportunities and tools to grow your business.</p>
+      <button (click)="navigateToSignup()">Register as Broker</button>
+    </div>
+<!-- 🤝 Broker Service Executive Support -->
+<div class="info-card">
+    <h3>Need Help Finding Clients?</h3>
+    <p>Our Broker Service Executives can connect you with potential clients who need flood insurance coverage. Let us help you grow!</p>
+    <a href="tel:+18001234567">
+      <button>Contact Broker Support</button>
+    </a>
+  </div>
+  
+    <!-- 🌍 Locations Introduction Header -->
+<div class="locations-header">
+    <h2 class="section-title">🌐 Explore Our Global Presence</h2>
+    <p class="section-subtitle">We're here for you—wherever you are. Visit our offices and connect with our local support teams.</p>
+  </div>
+  
+
+  <div class="locations-section">
+    <h3>Our Global Offices</h3>
+    <div class="location-cards">
+  
+     <!-- Worcester -->
+<div class="info-card">
+    <h4>📍 Worcester, USA</h4>
+    <p>1 Mercantile Street, Worcester, MA 01608</p>
+    <button (click)="toggleMap('newYork')">
+      {{ showNewYorkMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showNewYorkMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.716841621306!2d-71.79773329999999!3d42.2632191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e406689ddea481%3A0x698b18fda4b88ad3!2s1%20Mercantile%20St%2C%20Worcester%2C%20MA%2001608%2C%20USA!5e0!3m2!1sen!2sin!4v1745430814272!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Toronto -->
+  <div class="info-card">
+    <h4>📍 Toronto, Canada</h4>
+    <p>1 University Avenue, Toronto</p>
+    <button (click)="toggleMap('toronto')">
+      {{ showTorontoMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showTorontoMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.1135131463298!2d-79.38308649999999!3d43.6458066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d30a900001%3A0x17e24f7f8b2225ce!2s1%20University%20Avenue!5e0!3m2!1sen!2sin!4v1745430867208!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- London -->
+  <div class="info-card">
+    <h4>📍 London, UK</h4>
+    <p>8 Lloyd’s Avenue, First Floor, London EC3N 3EL</p>
+    <button (click)="toggleMap('toronto')">
+      {{ showTorontoMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showTorontoMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.0824684186123!2d-0.077968!3d51.511703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603760fabdaf3%3A0xcf082f75784d8ccc!2s8%20Lloyds%20Avenue!5e0!3m2!1sen!2sin!4v1745430893593!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Sydney -->
+  <div class="info-card">
+    <h4>📍 Sydney, Australia</h4>
+    <p>100 Barangaroo Avenue, Sydney NSW 2000</p>
+    <button (click)="toggleMap('noida')">
+      {{ showNoidaMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showNoidaMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.0153918578512!2d151.2020767!3d-33.8634942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12af0dd750ad29%3A0x946a476571a65f10!2sOne%20International%20Towers!5e0!3m2!1sen!2sin!4v1745430916699!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Krakow -->
+  <div class="info-card">
+    <h4>📍 Krakow, Poland</h4>
+    <p>21 Pawia Street, High 5ive, Krakow</p>
+    <button (click)="toggleMap('newYork')">
+      {{ showNewYorkMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showNewYorkMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.8870988865283!2d19.946361600000003!3d50.069676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b1af2fb67b1%3A0xe6f0a5ef57e51328!2sBusiness%20Link%20High5ive%20(Krak%C3%B3w)!5e0!3m2!1sen!2sin!4v1745430958910!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Gurugram -->
+  <div class="info-card">
+    <h4>📍 Gurugram, India</h4>
+    <p>Secto 48, Candor TechSpace, Gurgaon</p>
+    <button (click)="toggleMap('noida')">
+      {{ showNoidaMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showNoidaMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.8242573772977!2d77.0315504!3d28.4245593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d180b42eaaaab%3A0xb746b1c28afae275!2sCandor%20TechSpace%2C%20Sector%2048%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1745430974909!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Bengaluru -->
+  <div class="info-card">
+    <h4>📍 Bengaluru, India</h4>
+    <p>Kalyani Business Park, Bengaluru</p>
+    <button (click)="toggleMap('toronto')">
+      {{ showTorontoMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showTorontoMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3888.515474621999!2d77.690377!3d12.938832999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzE5LjgiTiA3N8KwNDEnMjUuNCJF!5e0!3m2!1sen!2sin!4v1745430998067!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Noida -->
+  <div class="info-card">
+    <h4>📍 Noida, India</h4>
+    <p>Candor Tech Space ,Noida Sector 62</p>
+    <button (click)="toggleMap('noida')">
+      {{ showNoidaMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showNoidaMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.284073445303!2d77.357204!3d28.621247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM3JzE2LjUiTiA3N8KwMjEnMjUuOSJF!5e0!3m2!1sen!2sin!4v1745431020277!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  <!-- Pune -->
+  <div class="info-card">
+    <h4>📍 Pune, India</h4>
+    <p>Koregaon Park Annexe, Mundhwa</p>
+    <button (click)="toggleMap('newYork')">
+      {{ showNewYorkMap ? 'Hide Map' : 'View Map' }}
+    </button>
+    <div class="map-section" *ngIf="showNewYorkMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1891.4343611116842!2d73.91399426389314!3d18.534833619466593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDMyJzA4LjEiTiA3M8KwNTQnNDguNCJF!5e0!3m2!1sen!2sin!4v1745431038553!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  
+  
+    </div>
+  </div>
+  
+
+    <!-- ❓ FAQ Section -->
+    <div class="faq-section">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+        <button class="faq-question" (click)="toggleFaq(i)">
+          {{ faq.question }}
+          <span [class.expanded]="faq.expanded">+</span>
+        </button>
+        <div class="faq-answer" *ngIf="faq.expanded">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+<!-- 📜 Terms & Conditions -->
+<div class="info-card highlight">
+    <h3>Flood Insurance Terms & Conditions</h3>
+    <p>
+      By accessing this platform or utilizing our flood insurance services, you acknowledge and agree to our
+      <a href="/terms" target="_blank">Terms of Service</a> and
+      <a href="/privacy" target="_blank">Privacy Policy</a>. Your personal data is processed securely and in compliance with applicable data protection regulations.
+    </p>
+    <p>
+      Coverage options, premiums, and claims eligibility are determined based on multiple risk factors including property location, flood zone designation, elevation, prior flood history, and federal/state regulatory guidelines. All quotes are subject to underwriting approval and may vary by region.
+    </p>
+    <p>
+      Our services are designed for licensed brokers and individual property owners seeking comprehensive flood insurance solutions. Unauthorized use of this platform or misrepresentation of information may result in service termination or legal action.
+    </p>
+    <p>
+      Please note: flood insurance policies may have a mandatory waiting period before activation, typically 30 days, unless coverage is purchased in connection with a loan closing. It is the user’s responsibility to review policy terms in detail.
+    </p>
+    <p>
+      For assistance or further clarification on your coverage, limits, exclusions, or claims process, please contact our support team or refer to the National Flood Insurance Program (NFIP) guidelines.
+    </p>
+  </div>
+  
+  
+
+    <!-- ☎️ Support Info Cards -->
+    <section class="contact-info-cards">
+
+        <h3>Support & Contact Information</h3>
+      
+        <div class="info-card glass">
+          <h4>Call Us</h4>
+          <p><strong>Mobile:</strong> +91 9876543210</p>
+          <p><strong>Telephone:</strong> 0120-456789</p>
+          <p><strong>Fax:</strong> 0120-456780</p>
+        </div>
+      
+        <div class="info-card glass">
+          <h4>Email & Website</h4>
+          <p><strong>Email:</strong> Contact&#64;Marine.com</p>
+          <p><strong>Support:</strong> support&#64;Marine.com</p>
+          <p><strong>Website:</strong> www.Marine.com</p>
+        </div>
+      
+        <div class="info-card glass">
+          <h4>Visit HeadOffice </h4>
+          <p>Xceedance, Tower 3</p>
+          <p>Noida, Uttar Pradesh - 201301</p>
+          <p>India</p>
+        </div>
+      
+        <div class="info-card glass">
+          <h4>Social Media</h4>
+          <div class="social-icons">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f icon"></i><span>Facebook</span>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-twitter icon"></i><span>Twitter</span>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram icon"></i><span>Instagram</span>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-linkedin-in icon"></i><span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      
+        <!-- New Card 1: Office Hours -->
+        <div class="info-card glass">
+          <h4>Office Hours</h4>
+          <p><strong>Mon - Fri:</strong> 9:00 AM - 6:00 PM</p>
+          <p><strong>Sat:</strong> 10:00 AM - 2:00 PM</p>
+          <p><strong>Sun:</strong> Closed</p>
+        </div>
+      
+        <!-- New Card 2: Emergency Support -->
+        <div class="info-card glass">
+          <h4>Emergency Support</h4>
+          <p><strong>24/7 Helpline:</strong> +91 7985331573</p>
+          <p><strong>WhatsApp:</strong> +91 7985331573</p>
+          <p><strong>Priority Email:</strong> urgent&#64;Marine.com</p>
+        </div>
+      
+      </section>
+      
+
+  </div>
+</div>

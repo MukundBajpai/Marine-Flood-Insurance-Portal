@@ -1,0 +1,107 @@
+<section class="benefits">
+    <div class="benefit-card">
+      <h3>WHAT IS FLOOD INSURANCE?</h3>
+      <p><em>Your shield against the unpredictable waves of risk!</em></p>
+      <p>Flood Insurance provides financial protection for homes, businesses, and properties against damages caused by flooding. Whether you’re a homeowner in a flood-prone area or a business securing your premises, our insurance helps you recover quickly and confidently.</p>
+      <p>Flood Insurance is a vital safeguard for individuals and organizations facing the unpredictable forces of nature. Whether you're protecting your home, commercial property, or valuable assets, our comprehensive coverage shields you from financial losses caused by heavy rains, overflowing rivers, storm surges, or other flood-related events.</p>
+      <p>📌<b>Covers:</b> Property damage, structural repairs, water-logged belongings, cleanup costs, and more!</p>
+    </div>
+  
+    <div class="benefit-card">
+      <h3>WHY IS FLOOD INSURANCE REQUIRED?</h3>
+      <p><em>The ocean is unpredictable, but your security shouldn’t be!</em></p>
+      <p>From unexpected storms to rising waters, flood risks are real. A single flooding event can lead to massive financial losses—whether it’s damage to your home, business premises, or valuable belongings. Flood Insurance acts as your financial safety net, ensuring that no matter what nature brings, your investment stays protected.</p>
+      <p>Flood Insurance serves as your financial safeguard, ensuring that no matter what challenges arise from extreme weather, your assets remain secure. It provides coverage for structural damage, property loss, cleanup costs, and more—giving you peace of mind. By protecting against unpredictable flooding events, Flood Insurance helps individuals and businesses stay resilient, recover faster, and get back on their feet with confidence.</p>
+      <p>💡<b>Did you know?</b> Just one inch of floodwater can cause thousands of dollars in property damage—insurance helps minimize the impact!</p>
+    </div>
+  
+    <div class="benefit-card">
+      <h3>WHY CHOOSE US?</h3>
+      <p><em>Your one-stop destination for hassle-free flood insurance.</em></p>
+      <p>Why waste time searching for policies when we can do it for you? Our platform simplifies the process, helping you find the perfect flood insurance coverage without the hassle. With instant quotes, you can compare multiple policies and choose the best one within minutes. No more endless searching—just quick, accurate results tailored to your needs.</p>
+      <p>We also ensure competitive pricing, giving you access to the best rates from top insurers. You’ll get the coverage you need at a price that fits your budget. Our seamless process eliminates the frustration of lengthy forms and complicated procedures. We make getting insured quick, easy, and stress-free. Let us handle the details while you enjoy peace of mind.</p>
+      <p>💧<b>Stay protected with confidence:</b> choose the best flood insurance with us!</p>
+    </div>
+  </section>
+  
+
+    <section class="Origin Story">
+    <div class="card">
+        <div class="card-content">
+            <img src="OurStory-image.png" alt="India Map" class="map-image">
+            <div class="text-content">
+                <h2><span class="highlight">OUR STORY-</span> HOW IT ALL BEGAN!</h2>
+                <p>
+                    Marine Insurance was founded with a simple yet powerful goal: to bridge the gap between individuals and reliable flood insurance solutions. Our journey began when our founders witnessed firsthand the devastating impact of floods on families and businesses. With limited affordable options in the market, they decided to build a platform that would offer customers faster, smarter, and more cost-effective insurance policies.
+                <p>
+                    Through years of innovation, we have developed a customer-first approach that removes complexity, ensures competitive pricing, and delivers policies tailored to each client’s unique needs. Today, we proudly serve thousands of homeowners and business owners nationwide, helping them stay protected against unforeseen disasters.
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="Vision">
+        <div class="card">
+            <div class="card-content">
+                <div class="text-content">
+                    <h2><span class="highlight">OUR VISION-</span> NAVIGATING THE FUTURE WITH CONFIDENCE!</h2>
+                    <p>
+                        Our vision is to be the leading provider of marine insurance, setting the industry standard for trust, reliability, and innovation. We aim to safeguard the interests of shipowners, cargo operators, and maritime businesses by offering comprehensive, adaptable, and forward-thinking insurance solutions.
+                    <p>
+                        By leveraging cutting-edge technology, data-driven risk assessment, and a customer-first approach, we aspire to create a safer and more resilient maritime industry. Our commitment extends beyond financial protection—we envision a future where businesses can navigate the seas with confidence, knowing they have a dedicated partner safeguarding their assets and operations.
+                    </p>
+                </div>
+                <img src="Vission-image.png" alt="Vision Image" class="vision-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="Mission">
+        <div class="card">
+            <div class="card-content">
+                <img src="mission-image.png" alt="mission-image" class="mission-image">
+                <div class="text-content">
+                    <h2><span class="highlight">OUR MISSION-</span> SECURING YOUR MARITIME JOURNEY!</h2>
+                    <p>
+                        Our mission is to provide tailored and high-quality marine insurance solutions that address the diverse challenges of the maritime sector. We are dedicated to protecting vessels, cargo, and businesses from unforeseen risks by offering policies that are both comprehensive and flexible. With a strong emphasis on transparency, efficiency, and innovation, we strive to deliver seamless insurance experiences, from policy issuance to claim settlements.
+                    <p>
+                        Our goal is to foster long-term relationships built on trust, ensuring that our clients receive unparalleled support in times of need. Furthermore, we are committed to promoting sustainable and responsible maritime practices, integrating risk management strategies that contribute to a safer and more secure global trade environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="Founder">
+        <div class="card">
+          <div class="card-content">
+            <img src="founder.png" alt="Founder Image" class="mission-image" />
+            <div class="text-content">
+              <h2><span class="highlight">MEET OUR FOUNDER –</span> THE VISIONARY BEHIND THE MISSION</h2>
+              <p> Our founder, Mukund Bajpai, recognized the growing need for reliable and accessible flood protection and marine insurance solutions. Driven by his passion for technology and problem-solving, Mukund aimed to create a platform that blends advanced technology with practical insurance services. </p> <p> His vision was clear: to provide individuals and businesses with comprehensive coverage and safety tools that could withstand the unpredictability of nature. Under his leadership, our company has become a trusted partner, offering innovative, data-driven solutions that ensure peace of mind in the face of floods and marine risks. </p>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!--Team section-->
+      <section class="team-carousel">
+        <h2>Meet the Team</h2>
+        <div class="carousel-container">
+          <button class="carousel-arrow left" (click)="prevSlide()">&#x276E;</button>
+          <div class="carousel-track" [style.transform]="transformStyle">
+            <div class="team-member" *ngFor="let member of teamMembers">
+              <img class="team-photo" [src]="member.photo" [alt]="member.name" />
+              <div class="team-details">
+                <h3>{{ member.name }}</h3>
+                <p class="designation">{{ member.designation }}</p>
+                <p>{{ member.description }}</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-arrow right" (click)="nextSlide()">&#x276F;</button>
+        </div>
+      </section>

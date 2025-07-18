@@ -1,0 +1,65 @@
+<div class="risk-calculator">
+    <h2>🌊 Flood Risk Calculator</h2>
+  
+    <form (ngSubmit)="calculateRisk()" #riskForm="ngForm">
+      <label>Elevation (m):
+        <input type="number" [(ngModel)]="data.elevation" name="elevation" required />
+      </label>
+  
+      <label>Distance from Water (km):
+        <input type="number" [(ngModel)]="data.distanceFromWater" name="distanceFromWater" required />
+      </label>
+  
+      <label>Year Built:
+        <input type="number" [(ngModel)]="data.yearBuilt" name="yearBuilt" required />
+      </label>
+  
+      <label>Foundation Type:
+        <select [(ngModel)]="data.foundationType" name="foundationType" required>
+          <option value="">-- Select --</option>
+          <option value="Elevated">Elevated</option>
+          <option value="Slab">Slab</option>
+          <option value="Crawlspace">Crawlspace</option>
+        </select>
+      </label>
+  
+      <label>Construction Type:
+        <select [(ngModel)]="data.constructionType" name="constructionType" required>
+          <option value="">-- Select --</option>
+          <option value="Flood-resistant">Flood-resistant</option>
+          <option value="Wood">Wood</option>
+          <option value="Concrete">Concrete</option>
+        </select>
+      </label>
+  
+      <label class="checkbox-label">
+        <input type="checkbox" [(ngModel)]="data.floodHistory" name="floodHistory" />
+        Has Flood History?
+      </label>
+  
+      <button type="submit">Calculate Risk</button>
+    </form>
+  
+    <div *ngIf="showResult" class="result-box" [ngClass]="riskLevel.toLowerCase().replace(' ', '-')">
+      <h3>Risk Level: {{ riskLevel }}</h3>
+      <div class="score-circle">
+        <span>{{ score }}</span>
+      </div>
+      <button class="tips-btn" (click)="toggleModal()">💡 Safety Tips</button>
+      <button class="continue-btn" (click)="goToDashboard()">Continue to Dashboard</button>
+    </div>
+  
+    <div class="modal" *ngIf="showModal">
+      <div class="modal-content">
+        <h4>🏠 Safety Tips</h4>
+        <ul>
+          <li>Elevate electrical systems and appliances.</li>
+          <li>Get flood insurance coverage.</li>
+          <li>Keep sandbags handy during monsoon.</li>
+          <li>Stay alert for flood warnings.</li>
+        </ul>
+        <button (click)="toggleModal()">Close</button>
+      </div>
+    </div>
+  </div>
+  

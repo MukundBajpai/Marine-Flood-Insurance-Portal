@@ -1,0 +1,98 @@
+<div class="dashboard-wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <li><a routerLink="/quoteform">New Quote</a></li>
+      <li><a routerLink="/quote-list">All Quotes</a></li> <!-- Updated -->
+      <li><a routerLink="/myclients">My Clients</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+   <!-- Main Content -->
+   <main class="main-content">
+   
+
+<!-- Profile Section -->
+<div class="profile-card fade-in">
+  <img src="flood.jpg" alt="Profile Photo" class="profile-photo" />
+  <div class="profile-info">
+    <h3>John Broker</h3>
+    <p>Flood Insurance Specialist</p>
+  </div>
+</div>
+<!-- Stat Cards -->
+<div class="stats-container">
+  <div class="stat-card fade-in">
+    <div class="stat-title">Total Quotes</div>
+    <div class="stat-value">128</div>
+  </div>
+  <div class="stat-card fade-in">
+    <div class="stat-title">Active Quotes</div>
+    <div class="stat-value">34</div>
+  </div>
+  <div class="stat-card fade-in">
+    <div class="stat-title">Pending for Bind</div>
+    <div class="stat-value">6</div>
+  </div>
+</div>
+
+
+    <!-- Chart and Activity -->
+    <section class="chart-activity-container">
+      <div class="chart-section">
+        <div class="chart-header">
+          <h4>Monthly Quote Activity</h4>
+          <select [(ngModel)]="selectedFilter" (ngModelChange)="onFilterChange()">
+            <option value="year">This Year</option>
+            <option value="6months">Last 6 Months</option>
+            <option value="month">This Month</option>
+          </select>
+        </div>
+        <canvas #lineChartCanvas></canvas>
+      </div>
+
+      <div class="activity-section">
+        <h4>Recent Activity</h4>
+        <ul>
+          <li *ngFor="let activity of recentActivities">{{ activity }}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Recent Quotes Table -->
+    <section class="quotes-table-section">
+      <h4>Recent Quotes</h4>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Property</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let quote of recentQuotes">
+              <td>{{ quote.client }}</td>
+              <td>{{ quote.property }}</td>
+              <td>{{ quote.date }}</td>
+              <td
+                [ngClass]="{
+                  'status-bound': quote.status === 'Bound',
+                  'status-pending': quote.status === 'Pending'
+                }"
+              >
+                {{ quote.status }}
+              </td>
+              <td>${{ quote.premium }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>

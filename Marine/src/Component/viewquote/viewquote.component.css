@@ -1,0 +1,218 @@
+/* 🌐 Main container */
+.view-quote-container {
+  max-width: 980px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(245, 248, 255, 0.9));
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(13, 71, 161, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  backdrop-filter: blur(8px);
+  animation: fadeSlideIn 0.8s ease-out;
+  border: 1px solid rgba(13, 71, 161, 0.07);
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📦 Sections */
+.section {
+  margin-bottom: 2rem;
+  background: linear-gradient(120deg, #f7faff, #ffffff);
+  padding: 1.6rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.06);
+  border-left: 6px solid #1565C0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 24px rgba(13, 71, 161, 0.15);
+}
+
+.section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0D47A1;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1rem;
+  padding-bottom: 6px;
+}
+
+/* 💰 Premium Area */
+.premium-section {
+  background: linear-gradient(135deg, #e1f5fe, #bbdefb);
+  border-left: 6px solid #0D47A1;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: glowFade 1s ease;
+}
+
+@keyframes glowFade {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 transparent;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.15);
+  }
+}
+
+.premium-section::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #00c9ff 0%, transparent 70%);
+  opacity: 0.12;
+  filter: blur(30px);
+  z-index: 0;
+}
+
+.premium-section h3,
+.premium-section h4 {
+  position: relative;
+  z-index: 1;
+  color: #0D47A1;
+}
+
+/* 📊 Premium Table */
+.premium-factors-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.premium-factors-table th {
+  background: linear-gradient(to right, #1976D2, #0D47A1);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.premium-factors-table td {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid #e6efff;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.premium-factors-table tr:hover td {
+  background-color: #f2f9ff;
+}
+
+/* 🔽 Toggle */
+.breakdown-toggle {
+  margin: 1.2rem 0;
+  text-align: right;
+}
+
+.breakdown-toggle button {
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  color: #0D2E57;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.breakdown-toggle button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #38f9d7, #43e97b);
+}
+
+/* 📘 Explanation Card */
+.factor-explanations {
+  background: #ffffff;
+  border-left: 5px solid #2196F3;
+  padding: 1.2rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  animation: slideFadeUp 0.5s ease-out;
+}
+
+@keyframes slideFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.factor-explanations h5 {
+  color: #0D47A1;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.factor-explanations ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 🎯 Button Group */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+button {
+  padding: 0.75rem 1.8rem;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #1976D2, #0D47A1);
+  color: white;
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(13, 71, 161, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(to right, #6c757d, #495057);
+  color: white;
+  box-shadow: 0 4px 14px rgba(108, 117, 125, 0.25);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(to right, #495057, #343a40);
+  transform: translateY(-2px);
+}

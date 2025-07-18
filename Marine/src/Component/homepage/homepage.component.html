@@ -1,0 +1,166 @@
+<section class="hero">
+  <img src="flood.jpg" alt="Flooded Area" class="hero-bg" />
+  <div class="hero-content">
+    <h1>Lowest Flood Insurance Rates Guaranteed</h1>
+    <p>Instantly compare top flood quotes - Save up to 300%</p>
+    <button class="quote-btn" (click)="onGetQuoteClick()">GET A QUOTE</button>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>TRUSTED BY</h2>
+  <div class="testimonial-scroll-container" #scrollContainer>
+    <div class="testimonial-grid" #scrollGrid>
+      <div class="testimonial-card" *ngFor="let t of testimonials">
+        <h3>{{ t.name }}</h3>
+        <p>{{ t.feedback }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mission-card">
+  <h2>MARINE MISSION</h2>
+  <p>
+    Provide the best possible coverage while saving our clients time and money.
+    Our goal is to revolutionize flood insurance by merging advanced technology
+    with unparalleled expertise and personal attention — delivering peace of
+    mind, affordability, and maximum protection for every customer.
+  </p>
+</section>
+
+<section class="benefits">
+  <div class="benefit-card">
+    <h3>MOST COMPETITIVE RATES</h3>
+    <p>Our clients save up to 40% on their premiums!</p>
+    <p>
+      Marine utilizes LiDAR technology — the same tech used by NASA and the U.S.
+      Government. These high-res elevation data points provide crucial discounts
+      on your policy.
+    </p>
+    <p>
+      We partner with every major flood insurance company to shop the entire
+      market for the most competitive options.
+    </p>
+  </div>
+
+  <div class="benefit-card">
+    <h3>FAST, HASSLE FREE PROCESS</h3>
+    <p>The fastest, easiest flood insurance process... ever!</p>
+    <p>Traditional insurance is slow and complex. Marine simplifies it all.</p>
+    <p>
+      Type your address, answer a few quick questions, and secure the best flood
+      coverage — no long forms, no stress!
+    </p>
+  </div>
+
+  <div class="benefit-card">
+    <h3>SUPERIOR COVERAGE</h3>
+    <p>Time & money isn't the only benefit!</p>
+    <p>
+      Our programs can provide coverage up to $20M for buildings and $5M for
+      contents.
+    </p>
+    <p>
+      Enhancements include Replacement Cost, Loss of Use, Loss of Rents, Other
+      Structures, Basement Contents, Pool Repair, and more.
+    </p>
+  </div>
+</section>
+<!-- plansection -->
+<section class="plans-section">
+  <h2 class="section-title">Our Insurance Plans</h2>
+  <div class="plans-grid">
+    <div class="plan-card" *ngFor="let plan of plans" [ngClass]="plan.type">
+      <h3 class="plan-title">{{ plan.name }}</h3>
+      <ul class="plan-features">
+        <li *ngFor="let feature of plan.features">✔ {{ feature }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="advantage">
+  <h2>MARINE ADVANTAGE</h2>
+  <div class="advantage-table">
+    <div class="advantage-column standard">
+      <h3>Standard Insurance Agents</h3>
+      <ul>
+        <li>Represent 1–3 flood insurance companies</li>
+        <li>Limited rate options for clients</li>
+        <li>Manual quotes slow down response time</li>
+        <li>Below average flood knowledge</li>
+        <li>Mainly FEMA-based coverage</li>
+      </ul>
+    </div>
+    <div class="advantage-column marine-highlight">
+      <h3>MARINE</h3>
+      <ul>
+        <li>Over 30 flood insurance providers — most in the nation</li>
+        <li>Unmatched rate discovery across the full marketplace</li>
+        <li>Proprietary tech delivers quotes in minutes</li>
+        <li>True flood insurance specialists</li>
+        <li>Compare FEMA + 30+ private A-rated companies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- partnersection -->
+<section class="testimonials-section">
+  <h2 class="section-title">Our Business Partners</h2>
+
+  <div class="scroll-container">
+    <div class="scroll-wrapper">
+      <div class="scroll-grid auto-scroll">
+        <!-- Original List -->
+        <div class="testimonial-card" *ngFor="let p of partners">
+          <img [src]="p.logo" alt="{{ p.name }}" />
+          <h3>{{ p.name }}</h3>
+          <p>{{ p.lineOfInsurance }}</p>
+        </div>
+        <!-- Duplicate List for Seamless Scroll -->
+        <div class="testimonial-card" *ngFor="let p of partners">
+          <img [src]="p.logo" alt="{{ p.name }}" />
+          <h3>{{ p.name }}</h3>
+          <p>{{ p.lineOfInsurance }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- claimpartnersection -->
+<section class="claims-section">
+  <h2 class="section-title">Our Claims Partners</h2>
+  <div class="scroll-container">
+    <div class="scroll-grid">
+      <div class="mission-card" *ngFor="let c of claimsPartners">
+        <img [src]="c.logo" alt="{{ c.name }}" />
+        <h3>{{ c.name }}</h3>
+        <p>{{ c.lineOfBusiness }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="heat-maps">
+  <h2>Flood Risk Heat Maps</h2>
+  <div class="heat-map-images">
+    <!-- <img src="indiamap.jpeg" alt="Flood Risk Heatmap 1" /> -->
+    <img src="World_floodmap.jpg" alt="Flood Risk Heatmap 2" />
+  </div>
+</section>
+<section class="risk-check">
+  <div class="risk-check-container">
+    <h2>Not Sure About the Risk?</h2>
+    <p>
+      If you're uncertain about your property's flood exposure, use our Risk
+      Calculator to get a detailed, location-specific analysis. It only takes a
+      minute to understand your risk level and discover if you're overpaying or
+      underinsured.
+    </p>
+    <button class="risk-btn" (click)="onRiskCalculatorClick()">
+      Check My Flood Risk
+    </button>
+  </div>
+</section>
